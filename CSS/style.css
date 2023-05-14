@@ -6,7 +6,15 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* MENÚ DE NAVEGACIÓN */
+a{
+    text-decoration: none;
+}
+
+.titulo-centrado{
+    text-align: center;
+}
+
+/** MENÚ DE NAVEGACIÓN */
 nav{
     width: 100%;
     height: 150px;
@@ -94,3 +102,66 @@ nav .input-container i{
     padding: 0 0 0 25px;
     color: #767676;
 }
+
+/** HEADER */
+header{
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+header .imagen-header{
+    width: 80%;
+    height: 100%;
+    background: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: circle(90% at 92% 50%);
+    z-index: 2;
+    transition: all .5s;
+}
+
+header .content-header{
+    width: 50%;
+}
+
+header .content-header *{
+    margin: 10px 0;
+}
+
+header .content-header h2{
+    font-size: 65px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header .content-header p{
+    font-size: 19px;
+    text-align: justify;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #0C91E5;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn:hover{
+    background: #0874B8;
+}
+
+
