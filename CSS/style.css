@@ -10,11 +10,6 @@ a{
     text-decoration: none;
 }
 
-.titulo-centrado{
-    text-align: center;
-    padding: 0 0 25px 0;
-}
-
 .justificado{
     text-align: justify;
     padding: 2px;
@@ -118,10 +113,11 @@ header{
     justify-content: flex-start;
     align-items: center;
     padding-left: 50px;
+    background: linear-gradient(#5EBEC3,#112D42);
 }
 
 header .imagen-header{
-    width: 80%;
+    width: 100%;
     height: 100%;
     background: url(../img/header.jpg);
     background-size: cover;
@@ -135,17 +131,19 @@ header .content-header{
     width: 50%;
 }
 
-header .content-header *{
+header .contenido *{
     margin: 10px 0;
 }
 
-header .content-header h2{
+header .contenido h2{
     font-size: 65px;
-    font-weight: 300;
+    font-weight: 500;
+    color: #33363D;
     text-transform: uppercase;
+    text-align: center;
 }
 
-header .content-header p{
+header .contenido p{
     font-size: 19px;
     text-align: justify;
 }
@@ -249,7 +247,7 @@ header .content-header p{
 }
 
 .producto {
-    background-color: #037bc0;
+    background-color: #5EBEC3;
     box-shadow: 1px 1px 6px 3px #000;
 }
 
