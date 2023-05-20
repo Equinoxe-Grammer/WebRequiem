@@ -10,11 +10,45 @@ a{
     text-decoration: none;
 }
 
+.titulo-centrado{
+    font-size: 40px;
+    font-weight: 600;
+    color: #33363D;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
 .justificado{
     text-align: justify;
     padding: 2px;
     font-size: 18px;
 }
+
+ul, li{
+    list-style: none;
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background: #0C91E5;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn:hover{
+    background: #0874B8;
+}
+
 
 /** MENÚ DE NAVEGACIÓN */
 nav{
@@ -135,46 +169,13 @@ header .contenido *{
     margin: 10px 0;
 }
 
-header .contenido h2{
-    font-size: 65px;
-    font-weight: 500;
-    color: #33363D;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 header .contenido p{
     font-size: 19px;
     text-align: justify;
 }
 
-.btn{
-    width: 200px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    background: #0C91E5;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all .5s;
-}
-
-.btn:hover{
-    background: #0874B8;
-}
-
 /** Públicaciones */
 
-
-.contenido-principal {
-    padding-top: 5rem;
-}
 .listado-productos {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -199,7 +200,7 @@ header .contenido p{
 .producto:nth-child(3) img {
     height: 30rem;
     width: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 .producto:nth-child(3) {
     grid-column-start: 4;
@@ -212,26 +213,22 @@ header .contenido p{
     grid-column-end: 3;
 }
 
-.producto:nth-child(4) img{
-    width: 100%;
-}
-
 .producto:nth-child(5) {
     grid-column-start: 3;
     grid-column-end: 5;
 }
 
-.producto:nth-child(5) img{
-    width: 100%;
-}
-
-.producto:nth-child(6) img{
-    width: 100%;
-}
-
 .producto:nth-child(6) {
     grid-column-start: 5;
     grid-column-end: 8;
+}
+
+.producto:nth-child(4) img,
+.producto:nth-child(5) img,
+.producto:nth-child(6) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: center;
 }
 
 .producto:nth-child(7) {
@@ -241,9 +238,9 @@ header .contenido p{
     grid-template-columns: 3fr 1fr;
 }
 .producto:nth-child(7) img {
-    height: 43rem;
+    height: 40rem;
     width: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 
 .producto {
@@ -278,4 +275,90 @@ header .contenido p{
 .ubicacion iframe{
     border-radius: 5px;
     box-shadow: 0 0 6px 2px #000;
+}
+
+/** MIS PUBLICACIONES */
+
+.publicaciones{
+    position: relative;
+    margin: 0 auto;
+    background: #FFF;
+    width: 1000px;
+    height: 550px;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slider div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.slider div:target{
+    opacity: 1;
+}
+
+.slider div img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: center;
+}
+
+.menu{
+    text-align: center;
+    margin: 200px;
+    padding: 30px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    line-height: 40px;
+    background: #262626;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+div h1, h2, h3{
+    text-align: center;
+}
+
+div h1{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+div h2{
+    font-size: 1.9rem;
+    font-weight: 700;
+    padding: 10px;
+}
+
+
+div h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px;
+    text-align: justify;
 }
