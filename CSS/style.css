@@ -29,7 +29,7 @@ ul, li{
     list-style: none;
 }
 
-.btn{
+.btn-ini{
     width: 200px;
     height: 40px;
     border-radius: 5px;
@@ -45,8 +45,28 @@ ul, li{
     transition: all .5s;
 }
 
-.btn:hover{
-    background: #0874B8;
+.btn-ini:hover{
+    background: #5EBEC3;
+}
+
+.btn-publ{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background: #0C91E5;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-publ:hover{
+    background: #0F3959;
 }
 
 
