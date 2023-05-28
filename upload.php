@@ -1,30 +1,34 @@
 <?php
+// Conectarse a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "Pokemon123/";
+$password = "";
 $dbname = "proyectof";
 
-// Crea la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Verifica la conexión
+
+// Verificar la conexión
 if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
 
-// Procesa la imagen subida
-if(isset($_POST["submit"])) {
-  $nombre_imagen = $_FILES["fileToUpload"]["name"];
-  $tipo_imagen = $_FILES["fileToUpload"]["type"];
-  $tamaño_imagen = $_FILES["fileToUpload"]["size"];
-  $contenido_imagen = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
+// Obtener los datos del formulario
+$Nombre = $_POST['Nombre'];
+$Precio = $_POST['Precio'];
+$Existencias = $_POST['Existencias'];
+$Descripcion = $_POST['Descripcion'];
+$imagen = $_FILES['imagen']['tmp_name'];
 
-  // Guarda la imagen en la base de datos
-  $sql = "INSERT INTO imagenes (nombre_imagen, tipo_imagen, tamaño_imagen, contenido_imagen) VALUES ('$nombre_imagen', '$tipo_imagen', '$tamaño_imagen', '$contenido_imagen')";
-  if ($conn->query($sql) === TRUE) {
-    echo "Imagen subida correctamente.";
-  } else {
-    echo "Error al subir la imagen: " . $conn->error;
-  }
+// Convertir la imagen en binario
+$imagen_binario = addslashes(file_get_contents($imagen));
+
+// Insertar los datos en la tabla
+$sql = "INSERT INTO producto (Nombre, Precio, Existencia, Descripcion, imagen,idUsuario) VALUES ('$Nombre', '$Precio', '$Existencias', '$Descripcion', '$imagen_binario','1')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Los datos se han insertado correctamente.";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
