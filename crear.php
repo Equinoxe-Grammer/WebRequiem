@@ -19,7 +19,7 @@
 
     <div class="enlaces">
         <a href="index.html">Inicio</a>
-        <a href="crear.html">Crear publicación</a>
+        <a href="crear.php">Crear publicación</a>
         <a href="mis-publicaciones.html">Mis publicaciones</a>
         <a href="inicio.html">Iniciar Sesión</a>
         <a class="input-container">
