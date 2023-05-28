@@ -32,22 +32,12 @@
 <section>
     <div class="container">
     <!-- Form -->
-        <div class="form">
+        <div class="form" action="upload.php" method="post" enctype="multipart/form-data">
             <h2 class="titulo-centrado">Crear publicación</h2>
             <div class="form-box">
                 <div class="input-box w50">
                     <input type="text" required>
-                    <span>Nombre (s)</span>
-                </div>
-
-                <div class="input-box w50">
-                    <input type="text" required>
-                    <span>Apellido (s)</span>
-                </div>
-
-                <div class="input-box w50">
-                    <input type="text" required>
-                    <span>Nombre del producto</span>
+                    <span>Nombre del Producto (s)</span>
                 </div>
 
                 <div class="input-box w50">
@@ -55,17 +45,24 @@
                     <span>Precio</span>
                 </div>
 
-                    <div class="imagen">
-                        <h3>Imagen del producto</h3>
-                        <img src="img/producto1.jpg" alt="">
-                    </div>
+                <div class="input-box w50">
+                    <input type="text" required>
+                    <span>Descripcion</span>
+                </div>
 
                 <div class="input-box w50">
-                    <h3>¿En que Facultad se encuentra?</h3>
-                    
-                        
-                    
+                    <input type="number" required>
+                    <span>Existencias</span>
                 </div>
+
+                    <div class="imagen">
+                   
+  Selecciona una imagen para subir:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  
+                    </div>
+
+                
 
                 <div class="input-box w100 btn">
                     <input type="submit" value="Enviar">

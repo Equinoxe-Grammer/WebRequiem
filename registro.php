@@ -26,27 +26,22 @@ $resultado = mysqli_query($conexion, $sql);
                 <h2>Registrarse WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
-                        <input type="text" required>
-                        <span>Nombre</span>
+                        <input type="text" name="Nombre" required>
+                        <span>Nombre completo</span>
                     </div>
 
                     <div class="input-box w50">
-                        <input type="text" required>
-                        <span>Apellido</span>
-                    </div>
-
-                    <div class="input-box w50">
-                        <input type="text" required>
+                        <input type="text" name="Matricula" required>
                         <span>Matricula</span>
                     </div>
 
                     <div class="input-box w50">
-                        <input type="text" required>
-                        <span>Email</span>
+                        <input type="text" name="Correo" required>
+                        <span>Correo</span>
                     </div>
 
                     <div class="input-box w50">
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <span>Contraseña</span>
                     </div>
 
