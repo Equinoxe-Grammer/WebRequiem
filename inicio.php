@@ -12,21 +12,19 @@
     <section>
         <div class="container">
         <!-- Form -->
-            <div class="form">
+            <form class="form" action="usuario.php" method="post">
+                
                 <h2>Inicio de Sesión WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
-                        <input type="text" required>
+                        <input type="text" id="matricula" name="matricula" required>
                         <span>Matricula</span>
                     </div>
 
-                    <div class="input-box w50">
-                        <input type="text" required>
-                        <span>Correo Elctronico</span>
-                    </div>
+                   
 
                     <div class="input-box w50">
-                        <input type="text" required>
+                        <input type="password" id="contraseña" name="contraseña" required>
                         <span>Contraseña</span>
                     </div>
 
@@ -48,7 +46,7 @@
                         <input type="submit" value="Enviar">
                     </div>
 
-            </div> 
+                </form> 
         </div>
     </section>
 </body>
