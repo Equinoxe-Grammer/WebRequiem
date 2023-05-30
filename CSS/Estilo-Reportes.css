@@ -6,6 +6,30 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+  background-color: #112D42;
+}
+
+.btn-envi{
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #0C91E5;
+  color: #FFF;
+  margin: 15px 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn-envi:hover{
+  background: #5EBEC3;
+}
+
+
 /** MENÚ DE NAVEGACIÓN */
 nav{
   width: 100%;
@@ -97,8 +121,8 @@ nav .input-container i{
 .btn {
     box-sizing: border-box;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: 2px solid #e74c3c;
     border-radius: 0.6em;
@@ -109,8 +133,8 @@ nav .input-container i{
     display: -ms-flexbox;
     display: flex;
     -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
@@ -139,9 +163,7 @@ nav .input-container i{
     justify-content: center;
     align-items: center;
   }
-  body {
-    background-color: #112D42;
-  }
+
   .form-container, .formulario {
     display: flex;
     align-items: flex-start;
@@ -153,7 +175,8 @@ nav .input-container i{
   .form-container label {
     display: block;
     width: 150px;
-    
+    font-size: 16px;
+    font-weight: 600;
   }
   .datos2 { 
     padding-left: 600px;
@@ -162,51 +185,29 @@ nav .input-container i{
   .datos1 {
     padding-left: 100px;
   }
-  .botonenvi {
-    background-color: #f1f1f1;
-    color: #333;
-  }
-  
-  .botonenvi:hover {
-    background-color: lightgreen;
-    color: #f1f1f1;
-  }
+
+
   button {
     background-color: lightsteelblue;
     border-radius: 20px;
+    width: 100%;
+    margin: 15px;
   }
-  .mapaf {
-     border-radius: 20px;
-     margin-top: 20px;
-  }
+
   .formulario2 {
-    margin-top: -300px;
+    margin-top: -250px;
     margin-left: 20px;
   }
+
   .barra {
     margin-left: 190px;
     margin-top: -25px;
-  }
-  .dropdown {
-    margin-bottom: 10px;
-  }
-
-  .dropdown select {
-    width: 200px;
-    padding: 5px;
-    font-size: 16px;
-  }
-
-  .dropdown textarea {
-    width: 200px;
-    height: 100px;
-    padding: 5px;
-    font-size: 16px;
   }
 
   .submit-btn {
     margin-top: 10px;
   }
+
   .reptext {
     margin-top: 9px;
     width: 600px;
@@ -217,12 +218,12 @@ nav .input-container i{
     margin-left: 25px;
     margin-top: 20px;
   }
+
   #texto{
     width: 600px;
-    height: 200px;
-  }
-  .enviar2:hover{
-    background-color: lightgreen;
-    color: #f1f1f1;
-  }
-  
+    height: 150px;
+    resize: none;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 5px #000;
+    }
