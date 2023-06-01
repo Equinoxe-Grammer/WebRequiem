@@ -10,6 +10,7 @@ $resultado = mysqli_query($conexion, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,11 +19,12 @@ $resultado = mysqli_query($conexion, $sql);
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="CSS/registro-style.css">
 </head>
+
 <body>
     <section>
         <div class="container">
-        <!-- Form -->
-            <div class="form">
+            <!-- Form -->
+            <form class="form" action="Registrarusr.php" method="post">
                 <h2>Registrarse WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
@@ -46,27 +48,27 @@ $resultado = mysqli_query($conexion, $sql);
                     </div>
 
                     <div class="input-box w50">
-                        <input type="password" required>
+                        <input type="password" name="password2" required>
                         <span>Confirmar contraseña</span>
                     </div>
 
                     <div class="input-box w50">
                         <h3>Facultad</h3>
                         <?php
-                    // Generar opciones del select
-echo "<select name='facultad'>";
-while ($fila = mysqli_fetch_assoc($resultado)) {
-    echo "<option value='" . $fila['IdFacultad'] . "'>" . $fila['Facultad'] . "</option>";
-}
-echo "</select>";
-?>
+                        // Generar opciones del select
+                        echo "<select name='facultad'>";
+                        while ($fila = mysqli_fetch_assoc($resultado)) {
+                            echo "<option value='" . $fila['IdFacultad'] . "'>" . $fila['Facultad'] . "</option>";
+                        }
+                        echo "</select>";
+                        ?>
                     </div>
 
                     <div>
                         <label for="cliente">Usuario</label>
                         <input id="cliente" type="radio" name="tipo" value="cliente">
                     </div>
-    
+
                     <div>
                         <label for="proveedor">Administrador</label>
                         <input id="proveedor" type="radio" name="tipo" value="proveedor">
@@ -75,17 +77,18 @@ echo "</select>";
                     <div class="input-box w100 btn">
                         <input type="submit" value="Enviar">
                     </div>
-                    </div>
                 </div>
-            </div>
         </div>
+        </div>
+        </form>
     </section>
     <?php
 
 
 
-// Cerrar conexión a la base de datos
-mysqli_close($conexion);
-?>
+    // Cerrar conexión a la base de datos
+    mysqli_close($conexion);
+    ?>
 </body>
+
 </html>
