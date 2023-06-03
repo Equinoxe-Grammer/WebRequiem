@@ -1,13 +1,4 @@
-<?php
-// Conexión a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "proyectof");
 
-// Consulta SQL
-$sql = "SELECT IdFacultad, Facultad FROM facultad";
-
-// Ejecutar consulta y obtener resultados
-$resultado = mysqli_query($conexion, $sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,15 +43,10 @@ $resultado = mysqli_query($conexion, $sql);
                         <span>Confirmar contraseña</span>
                     </div>
 
-                    <div class="input-box w50">
+                    <div class="input-box w50" action="Facultades.php" method="POST">
                         <h3>Facultad</h3>
                         <?php
-                        // Generar opciones del select
-                        echo "<select name='facultad'>";
-                        while ($fila = mysqli_fetch_assoc($resultado)) {
-                            echo "<option value='" . $fila['IdFacultad'] . "'>" . $fila['Facultad'] . "</option>";
-                        }
-                        echo "</select>";
+                     include'Facultades.php'
                         ?>
                     </div>
 
@@ -82,13 +68,7 @@ $resultado = mysqli_query($conexion, $sql);
         </div>
         </form>
     </section>
-    <?php
-
-
-
-    // Cerrar conexión a la base de datos
-    mysqli_close($conexion);
-    ?>
+   
 </body>
 
 </html>

@@ -20,7 +20,7 @@
     <div class="enlaces">
         <a href="index.html">Inicio</a>
         <a href="crear.php">Crear publicación</a>
-        <a href="mis-publicaciones.html">Mis publicaciones</a>
+        <a href="mis-publicaciones.html#slide1">Mis publicaciones</a>
         <a href="inicio.php">Iniciar Sesión</a>
         <a class="input-container">
             <input type="text" placeholder="Buscar">
