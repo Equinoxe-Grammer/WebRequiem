@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="CSS/registro-style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../CSS/registro-style.css">
 </head>
 
 <body>
-<?php
-     include'navbar.php'
+    <?php
+    include '../Acciones/navbar.php'
     ?>
     <section>
         <div class="container">
             <!-- Form -->
-            <form class="form" action="Registrarusr.php" method="post">
+            <form class="form" action="../Acciones/Registrarusr.php" method="post">
                 <h2>Registrarse WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
@@ -49,7 +48,7 @@
                     <div class="input-box w50" action="Facultades.php" method="POST">
                         <h3>Facultad</h3>
                         <?php
-                     include'Facultades.php'
+                        include '../Acciones/Facultades.php'
                         ?>
                     </div>
 
@@ -71,7 +70,7 @@
         </div>
         </form>
     </section>
-   
+
 </body>
 
 </html>

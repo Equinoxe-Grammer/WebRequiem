@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <title>Públicaciones</title>
 </head>
+
 <body>
     <!-- MENÚ DE NAVEGACIÓN -->
     <?php
-     include'navbar.php'
+    include '../Acciones/navbar.php'
     ?>
 
 
     <main class="contenido-principal contenedor ">
         <h2 class="titulo-centrado">Nuestras Públicaciones</h2>
-        
+
         <div class="listado-productos">
             <div class="producto">
-                <img src="img/producto1.jpg" alt="Imagen Producto" >
+                <img src="../img/producto1.jpg" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Tacos de picadillo</h2>
@@ -32,11 +34,11 @@
                         <h3 class="centro">Ubicación:</h3>
                         <H3 class="centro">Facultad de Ingeniería Mecánica y Eléctrica</H3>
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
 
             <div class="producto">
-                <img src="img/producto2.webp" alt="Imagen Producto" >
+                <img src="../img/producto2.webp" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Blusa blanca de vestir</h2>
@@ -45,12 +47,12 @@
                     <h3 class="centro">Nombre del vendedor: Alondra Elizabeth Hidalgo Ortiz</h3>
 
                     <h3 class="centro">Ubicación:</h3>
-                        <H3 class="centro">Facultad de Arquitecturaz</H3>
+                    <H3 class="centro">Facultad de Arquitecturaz</H3>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="img/producto3.avif" alt="Imagen Producto" >
+                <img src="../img/producto3.avif" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Calculadora Cientifica Casio</h2>
@@ -60,11 +62,11 @@
 
                     <h3 class="centro">Ubicación:</h3>
                     <H3 class="centro">Facultad de Ciencias Físico-Matemáticos</H3>
-                </div> 
-            </div> 
+                </div>
+            </div>
 
             <div class="producto">
-                <img src="img/producto4.jpg" alt="Imagen Producto" >
+                <img src="../img/producto4.jpg" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Bata Medica</h2>
@@ -72,44 +74,44 @@
                     <p class="precio">Precio: $400.00</p>
                     <h3 class="centro">Nombre del vendedor: Francisco Ramírez Hernandez</h3>
 
-                    
+
                     <h3 class="centro">Ubicación:</h3>
                     <H3 class="centro">Facultad de Medicina</H3>
-                </div> 
+                </div>
             </div>
 
             <div class="producto">
-                <img src="img/producto5.jpg" alt="Imagen Producto" >
+                <img src="../img/producto5.jpg" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Guitarra</h2>
                     <p class="justificado">Guitarra de Instrumento, Modelo de Guitarra clásica Musical en Miniatura, Adorno para Amigos, Familiares, compañeros de Clase.</p>
                     <p class="precio">Precio: $361.00</p>
                     <h3>Nombre del vendedor: Jose Juan García Lopez</h3>
-                    
-                    
+
+
                     <h3 class="centro">Ubicación:</h3>
                     <H3 class="centro">Facultad de Música</H3>
-                </div> 
-            </div> 
+                </div>
+            </div>
 
             <div class="producto">
-                <img src="img/producto6.jpg" alt="Imagen Producto" >
+                <img src="../img/producto6.jpg" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Arduino UNO</h2>
                     <p class="justificado">Se vende Arduino UNO Compatible Placa de Microcontrolador con Cable USB.</p>
                     <p class="precio">Precio: $240.00</p>
                     <h3>Nombre del Vendedor: Luis Martínez Ibarra</h3>
-        
+
                     <h3 class="centro">Ubicación:</h3>
                     <H3 class="centro">Facultad de Ingeniería Mecánica y Eléctrica</H3>
-                </div> 
-            </div> 
+                </div>
+            </div>
 
-            
+
             <div class="producto">
-                <img src="img/producto7.webp" alt="Imagen Producto" >
+                <img src="../img/producto7.webp" alt="Imagen Producto">
 
                 <div class="texto-producto">
                     <h2 class="titulo-centrado">Papitas</h2>
@@ -119,11 +121,12 @@
 
                     <h3 class="centro">Ubicación:</h3>
                     <H3 class="centro">Facultad de Contaduría Pública y Administración</H3>
-                </div> 
-            </div> 
-        </div> 
+                </div>
+            </div>
+        </div>
     </main>
 
 
 </body>
+
 </html>
