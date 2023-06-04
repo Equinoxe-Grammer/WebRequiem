@@ -10,42 +10,32 @@
     <link rel="stylesheet" href="../CSS/inicio-style.css">
 </head>
 
-<body>
+<body >
 
 
     <section>
         <div class="container">
-
             <!-- Form -->
             <form class="form" action="../Acciones/usuario.php" method="post">
-
                 <h2>Inicio de Sesión WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
                         <input type="text" id="matricula" name="matricula" required>
                         <span>Matricula</span>
                     </div>
-
-
-
                     <div class="input-box w50">
                         <input type="password" id="contraseña" name="contraseña" required>
                         <span>Contraseña</span>
                     </div>
-
-
-
-
                     <h3>¿No tiene cuenta?</h3>
                     <a href="../Vistas/registro.php"><button>Regístrate</button></a>
-
                     <div class="input-box w99 btn">
                         <input type="submit" value="Enviar">
                     </div>
-
             </form>
         </div>
     </section>
+    <button onclick="window.location.href='../Vistas/index.php'">PAGINA PRINIPAL</button>
 </body>
 
 </html>
