@@ -12,6 +12,9 @@
 </head>
 
 <body>
+<?php
+     include'navbar.php'
+    ?>
     <section>
         <div class="container">
             <!-- Form -->
