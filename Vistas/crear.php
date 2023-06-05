@@ -1,3 +1,9 @@
+<?php session_start();
+if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,3 +55,8 @@
 </body>
 
 </html>
+<?php 
+}else {
+  header('location:../Vistas/inicio.php');
+}
+?>

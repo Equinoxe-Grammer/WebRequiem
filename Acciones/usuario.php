@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Conecta a tu base de datos
 $conexion = mysqli_connect("localhost", "root", "", "proyectof");
 
@@ -12,13 +13,14 @@ if (mysqli_connect_errno()) {
 $matricula = $_POST["matricula"];
 $contraseña = $_POST["contraseña"];
 
+
 // Escapa los valores para evitar inyección SQL
 $matricula = mysqli_real_escape_string($conexion, $matricula);
 $contraseña = mysqli_real_escape_string($conexion, $contraseña);
 
 // Crea una consulta SQL para seleccionar el usuario y la contraseña de la tabla de usuarios
 $sql = "SELECT * FROM usuario WHERE matricula = '$matricula' AND contraseña = '$contraseña'";
-
+$query = $conexion->query($sql);
 // Ejecuta la consulta SQL
 $resultado = mysqli_query($conexion, $sql);
 
@@ -30,7 +32,14 @@ if (!$resultado) {
 
 // Verifica si el número de filas devueltas por la consulta es igual a 1
 if (mysqli_num_rows($resultado) == 1) {
-    echo "Usuario y contraseña válidos";
+    $usuario = $query->fetch_assoc();
+    $Id=  $usuario['IdUsuario'];
+    $_SESSION['IdUsuario'] = $Id;
+    $_SESSION['Contraseña'] = $contraseña;
+    echo "<script>
+    alert('bienvenido haz ingresado correctamente');
+    location.href = '../Vistas/index.php'
+    </script>";
 } else {
     echo "Usuario o contraseña inválidos";
 }

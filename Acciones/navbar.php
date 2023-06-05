@@ -14,10 +14,9 @@
         <a href="index.php">Inicio</a>
         <a href="crear.php">Crear publicación</a>
         <a href="mis-publicaciones.php#slide1">Mis publicaciones</a>
-        <a href="inicio.php">Iniciar Sesión</a>
         <a class="input-container">
-            <input type="text" placeholder="Buscar">
-            <i class="fas fa-search"></i>
+        <a href="../Acciones/cerrarsesion.php"> Cerrar Sesion </a>
+           
         </a>
     </div>
 </nav>

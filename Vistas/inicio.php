@@ -16,15 +16,15 @@
     <section>
         <div class="container">
             <!-- Form -->
-            <form class="form" action="../Acciones/usuario.php" method="post">
+            <form class="form" action="../Acciones/usuario.php" method="post" autocomplete="off">
                 <h2>Inicio de Sesión WebRequiem</h2>
                 <div class="form-box">
                     <div class="input-box w50">
-                        <input type="text" id="matricula" name="matricula" required>
+                        <input type="text" id="matricula" name="matricula" autocomplete="off" required>
                         <span>Matricula</span>
                     </div>
                     <div class="input-box w50">
-                        <input type="password" id="contraseña" name="contraseña" required>
+                        <input type="password" id="contraseña" name="contraseña" autocomplete="off" required>
                         <span>Contraseña</span>
                     </div>
                     <h3>¿No tiene cuenta?</h3>
