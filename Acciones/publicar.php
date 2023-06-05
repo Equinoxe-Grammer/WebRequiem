@@ -21,7 +21,7 @@ $imagen = $_FILES['imagen']['tmp_name'];
 $imagen_binario = addslashes(file_get_contents($imagen));
 
 // Insertar los datos en la tabla
-$sql = "INSERT INTO publicacion (IdUsuario, Titulo, Descripcion, Imagen, Visibilidad) VALUES ('1',  '$Titulo', '$Descripcion', '$imagen_binario','1')";
+$sql = "INSERT INTO publicacion (IdUsuario, Titulo, Descripcion, Imagen, Visibilidad) VALUES ('$_SESSION[IdUsuario]',  '$Titulo', '$Descripcion', '$imagen_binario','1')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Los datos se han insertado correctamente.";

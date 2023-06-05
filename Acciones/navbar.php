@@ -1,3 +1,6 @@
+<?php
+$Idusuario=$_SESSION['IdUsuario'];
+?>
 <nav>
     <style>
 #logo {
