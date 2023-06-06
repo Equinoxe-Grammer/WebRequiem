@@ -28,12 +28,13 @@
                         <span>Contraseña</span>
                     </div>
                     <h3>¿No tiene cuenta?</h3>
-                    <a href="../Vistas/registro.php"><button>Regístrate</button></a>
                     <div class="input-box w99 btn">
                         <input type="submit" value="Enviar">
                     </div>
             </form>
         </div>
+        <a href="../Vistas/registro.php"><button class="registro">Regístrate</button></a>
+
     </section>
     <button onclick="window.location.href='../Vistas/index.php'">PAGINA PRINIPAL</button>
 </body>

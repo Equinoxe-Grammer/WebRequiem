@@ -145,3 +145,26 @@ img{
     left: 30%;
     border-radius: 20px;
 }
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background: #0C91E5;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+    position: absolute;
+    top: 700px;
+    left: 350px;
+}
+
+.btn:hover{
+    background: #5EBEC3;
+}

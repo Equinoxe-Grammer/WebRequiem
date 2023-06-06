@@ -15,30 +15,6 @@
     padding: 20px;
 }
 
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #112D42;
-}
-
-.container{
-    position: relative;
-    width: 100%;
-    height: 750px;
-    z-index: 1;
-    display: flex;
-}
-
-h3{
-    font-size: 20px;
-    font-weight: 400;
-    color: #0F3959;
-}
-
-
-
 /** MENÚ DE NAVEGACIÓN */
 nav{
     width: 100%;
@@ -52,7 +28,7 @@ nav{
     color: #EDF0F1;
     font-size: 1.2em;
     font-weight: 600;
-    z-index: 2;
+    
 }
 
 
@@ -110,11 +86,9 @@ nav input::placeholder{
     font-size: 16px;
 }
 
-
 nav input:focus{
     padding: 0 0 0 25px;
 }
-
 
 nav .input-container i{
     position: absolute;
@@ -129,13 +103,36 @@ nav .input-container i{
     color: #767676;
 }
 
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #112D42;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 750px;
+    z-index: 1;
+    display: flex;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #0F3959;
+}
+
 /* FORM */
 .form{
     position: absolute;
-    width: calc(100% - 200px);
-    height: 100%;
+    width: 80%;
+    height: 500px;
     background: #FFF;
-    margin-left: 150px;
+    margin-top: 150px;
+    margin-left: 130px;
     padding: 70px 50px 70px 250px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
@@ -243,6 +240,7 @@ select, option{
     width: 30%;
     padding: 12px;
     transition: all .5s;
+    margin-top: 25px;
 }
 
 .input-box input[type="submit"]:hover{

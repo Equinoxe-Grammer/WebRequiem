@@ -11,9 +11,6 @@
 </head>
 
 <body>
-    <?php
-    include '../Acciones/navbar.php'
-    ?>
     <section>
         <div class="container">
             <!-- Form -->

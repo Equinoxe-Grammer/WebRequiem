@@ -24,6 +24,8 @@ if ($result->num_rows > 0) {
       echo "<li><img src='data:image/png;base64," . base64_encode($row['Imagen']) . "' class='imagen' /></li>";
       
       echo "</ul>"; echo "</section>";
+
+      echo "<buttom class='btn'>Mentiras</buttom>";
   }
 } else {
   echo "0 resultados";

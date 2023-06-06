@@ -37,45 +37,11 @@ if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
       <p>Además, ofrecemos una amplia variedad de categorías para que puedas encontrar lo que estás buscando de manera sencilla. Y si eres vendedor, nuestra plataforma te permite publicar tus productos de manera gratuita y llegar a una audiencia local y relevante.</p>
 
       <p>¡Explora nuestra tienda en línea hoy mismo y descubre todo lo que Web Requiem tiene para ofrecerte!</p>
-
-      <a href="../Vistas/publicaciones.php"><button class="btn-ini">Ver publicaciones</button></a>
     </div>
 
     <div class="imagen-header"></div>
   </header>
-  <style>
-    /* Estilos para el pie de página */
-    footer {
-      background-color: lightslategray;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Estilos para el enlace */
-    footer a {
-      color: red;
-      text-decoration: none;
-      font-size: 30px;
-    }
-
-    .textorep {
-      color: white;
-    }
-  </style>
-  </head>
-
-  <body>
-    <!-- Contenido del sitio web -->
-
-    <footer>
-      <p class="textorep">¿Tienes comentarios para nosotros? o quizá</p>
-      <p class="textorep">¿Viste algo indebido? aqui puedes hacer tu reporte:</p>
-      <div class="botonrepo">
-        <a href="../Vistas/Reportes.php"><button class="btn first"><img src="../img/reporte logo.png" alt="" width="20px"> Reportes</button></a>
-      </div>
-    </footer>
-  </body>
-
+</body>
 </html>
 <?php 
 }else {
