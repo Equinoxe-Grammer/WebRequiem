@@ -12,12 +12,18 @@ $sql = "SELECT * FROM producto WHERE IdUsuario = $id"; $result = $conn->query($s
 if ($result->num_rows > 0) {
     // Recorrer los resultados y mostrar una slide por cada fila
     while($row = $result->fetch_assoc()) {
-      echo "<div class='slide'>";
-      echo "<h2>" . $row["Nombre"] . "</h2>";
-      echo "<p>" . $row["Descripcion"] . "</p>";
-    echo  '<img src = "data:image/png;base64,' . base64_encode($row['Imagen']) . '" style="display:block; margin:auto; width = "500px" height = "300px"/>'
-    . '</td>';
-    echo "</div>";
+      echo "<section class='publicaciones slide'>";
+      echo "<ul>";
+
+      echo "<li><h2 class='titulo'>Nombre del producto: " . $row["Nombre"] . "</h2></li>";
+      
+      echo "<li><p class='texto'>Descripción: " . $row["Descripcion"] . "</p></li>";
+      
+      echo "<li><p class='texto'>Precio: " . $row["Precio"] . "$</p></li>";
+      
+      echo "<li><img src='data:image/png;base64," . base64_encode($row['Imagen']) . "' class='imagen' /></li>";
+      
+      echo "</ul>"; echo "</section>";
   }
 } else {
   echo "0 resultados";
