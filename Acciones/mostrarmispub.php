@@ -12,7 +12,7 @@ $sql = "SELECT * FROM producto WHERE IdUsuario = $id"; $result = $conn->query($s
 if ($result->num_rows > 0) {
     // Recorrer los resultados y mostrar una slide por cada fila
     while($row = $result->fetch_assoc()) {
-      echo "<section class='publicaciones slide'>";
+      echo "<section class='publicaciones slide' id='" . $row["IdProducto"] . "'>";
       echo "<ul>";
 
       echo "<li><h2 class='titulo'>Nombre del producto: " . $row["Nombre"] . "</h2></li>";
@@ -22,10 +22,11 @@ if ($result->num_rows > 0) {
       echo "<li><p class='texto'>Precio: " . $row["Precio"] . "$</p></li>";
       
       echo "<li><img src='data:image/png;base64," . base64_encode($row['Imagen']) . "' class='imagen' /></li>";
-      
-      echo "</ul>"; echo "</section>";
+      echo "<li><button class='btn' onclick='borrarPublicacion(".$row["IdProducto"].")'>Eliminar Producto</button></li>";
+      echo "</ul>";
+       echo "</section>";
 
-      echo "<buttom class='btn'>Mentiras</buttom>";
+      
   }
 } else {
   echo "0 resultados";
