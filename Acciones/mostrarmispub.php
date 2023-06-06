@@ -22,7 +22,26 @@ if ($result->num_rows > 0) {
       echo "<li><p class='texto'>Precio: " . $row["Precio"] . "$</p></li>";
       
       echo "<li><img src='data:image/png;base64," . base64_encode($row['Imagen']) . "' class='imagen' /></li>";
-      echo "<li><button class='btn' onclick='borrarPublicacion(".$row["IdProducto"].")'>Eliminar Producto</button></li>";
+      echo "<li><button class='btn' onclick='borrarPublicacion(".$row["IdProducto"].")'>Eliminar Producto</button> </li>";
+      $codigo = '<button class="btn2" onclick="mostrarVentanaEmergente()">Editar Producto</button>
+
+<div id="ventanaEmergente" style="display:none;">
+  <form action="../Acciones/editarproducto.php" method="POST" id=' . $row["IdProducto"] . '>
+  <input type="hidden" name="id" value=' . $row["IdProducto"] . '>
+    <label for="nombre">Nombre del producto:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion"><br><br>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" name="precio"><br><br>
+    <label for="Existencia">Existencias:</label>
+    <input type="number" id="Existencias" name="existencias"><br><br>
+  
+    <input type="submit" value="Enviar">
+  </form>
+</div>';
+
+echo $codigo;
       echo "</ul>";
        echo "</section>";
 

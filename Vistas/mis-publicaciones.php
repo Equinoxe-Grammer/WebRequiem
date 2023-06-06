@@ -29,7 +29,7 @@ if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
   ?>
 
     </section>
-    <script src="../js/eliminarproducto.js"></script>
+    <script src="../js/eliminareditarproducto.js"></script>
 </body>
 
 </html>
