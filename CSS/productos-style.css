@@ -160,11 +160,40 @@ img{
     align-items: center;
     cursor: pointer;
     transition: all .5s;
-    
+
     top: 700px;
     left: 350px;
 }
+
+.btn:hover{
+    background: #af071d;
+
+}
+
 .btn2{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background: #e6d816;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+
+    top: 700px;
+    left: 350px;
+}
+.btn2:hover{
+    background: #867e05;
+}
+
+
+.btn-env{
     width: 200px;
     height: 40px;
     border-radius: 5px;
@@ -182,10 +211,10 @@ img{
     top: 700px;
     left: 350px;
 }
-
-.btn:hover{
-    background: #5EBEC3;
+.btn-env{
+    background: #867e05;
 }
+
 div {
     position: relative;
     z-index: 1;
