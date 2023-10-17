@@ -283,12 +283,9 @@ header .contenido p{
     font-weight: 900;
 }
 
-.ubicacion{
-    padding: 20px;
-}
-
-.ubicacion h3{
-    padding: 20px;
+.centro{
+    text-align: center;
+    padding: 5px;
 }
 
 .ubicacion iframe{
@@ -381,3 +378,4 @@ div h3{
     padding: 10px;
     text-align: justify;
 }
+
