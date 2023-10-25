@@ -1,6 +1,6 @@
 <?php
 // Conectarse a la base de datos
-$conn = mysqli_connect("localhost", "root", "", "proyectof");
+$conn = mysqli_connect("localhost", "root", "Teteradegas69/", "proyectof");
 
 // Verificar la conexión
 if (!$conn) {

@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "proyectof");
+$conexion = mysqli_connect("localhost", "root", "Teteradegas69/", "proyectof");
 
 // Consulta SQL
 $sql = "SELECT IdFacultad, Facultad FROM facultad";

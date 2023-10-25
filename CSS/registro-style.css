@@ -1,12 +1,13 @@
-/** GENERALES  */
-*{
+/* ESTILOS GENERALES */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.titulo-centrado{
+/* ENCABEZADO CENTRADO */
+.titulo-centrado {
     font-size: 35px;
     font-weight: 600;
     color: #33363D;
@@ -15,8 +16,8 @@
     padding: 20px;
 }
 
-/** MENÚ DE NAVEGACIÓN */
-nav{
+/* MENÚ DE NAVEGACIÓN */
+nav {
     width: 100%;
     height: 150px;
     display: flex;
@@ -28,11 +29,9 @@ nav{
     color: #EDF0F1;
     font-size: 1.2em;
     font-weight: 600;
-    
 }
 
-
-nav img{
+nav img {
     width: 150px;
     height: 150px;
     position: relative;
@@ -41,38 +40,34 @@ nav img{
     cursor: pointer;
 }
 
-
-nav .enlaces a{
+nav .enlaces a {
     position: relative;
     padding: 0 20px;
-    transition: all .5s; 
+    transition: all 0.5s;
     color: #fff;
     text-decoration: none;
-    
 }
 
-nav .enlaces a:hover{
+nav .enlaces a:hover {
     color: #FAAF38;
 }
 
-nav .enlaces a::before{
+nav .enlaces a::before {
     content: '';
     width: 0;
     height: 2px;
     background: #FAAF38;
     position: absolute;
     bottom: -5px;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
-nav .enlaces a:hover::before{
+nav .enlaces a:hover::before {
     width: 40%;
 }
 
-
-/* NAV/BUSCAR */
-
-nav input{
+/* BARRA DE BÚSQUEDA EN EL MENÚ */
+nav input {
     width: 20%;
     height: 10%;
     border-radius: 40px;
@@ -82,15 +77,15 @@ nav input{
     outline: none;
 }
 
-nav input::placeholder{
+nav input::placeholder {
     font-size: 16px;
 }
 
-nav input:focus{
+nav input:focus {
     padding: 0 0 0 25px;
 }
 
-nav .input-container i{
+nav .input-container i {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -103,7 +98,8 @@ nav .input-container i{
     color: #767676;
 }
 
-section{
+/* SECCIÓN PRINCIPAL */
+section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +107,8 @@ section{
     background: #112D42;
 }
 
-.container{
+/* CONTENEDOR PRINCIPAL */
+.container {
     position: relative;
     width: 100%;
     height: 750px;
@@ -119,14 +116,15 @@ section{
     display: flex;
 }
 
-h3{
+/* ENCABEZADO H3 */
+h3 {
     font-size: 20px;
     font-weight: 400;
     color: #0F3959;
 }
 
-/* FORM */
-.form{
+/* FORMULARIO */
+.form {
     position: absolute;
     width: 80%;
     height: 500px;
@@ -137,33 +135,36 @@ h3{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-.form h2{
+.form h2 {
     color: #0F3959;
     text-align: center;
 }
 
-.form-box{
+.form-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 30px;
 }
 
-.input-box{
+/* CAJA DE ENTRADA DE TEXTO */
+.input-box {
     position: relative;
     margin-bottom: 35px;
-}
-
-.input-box.w50{
-    width: 48%;
-}
-
-.input-box.w100{
     width: 100%;
 }
 
+.input-box.w50 {
+    width: 48%;
+}
+
+.input-box.w100 {
+    width: 100%;
+}
+
+/* IMAGEN */
 img {
-    width:400px;
+    width: 400px;
     height: 300px;
 }
 
@@ -172,13 +173,15 @@ img {
     border-radius: 25px;
 }
 
-.imagen h3{
+.imagen h3 {
     text-align: center;
     margin: 10px;
     font-size: 21px;
 }
 
-.input-box input, select{
+/* ENTRADAS DE TEXTO Y SELECT */
+.input-box input,
+select {
     width: 100%;
     padding: 5px 0;
     font-size: 18px;
@@ -188,22 +191,26 @@ img {
     outline: none;
 }
 
-.input-box h3{
+/* ETIQUETAS DE H3 */
+.input-box h3 {
     text-align: center;
     margin: 10px;
 }
 
+/* SELECT */
 select {
     font-size: 20px;
     color: #888;
 }
 
-select, option{
+select,
+option {
     font-size: 16px;
     color: #112D42;
 }
 
-.input-box span{
+/* ETIQUETAS SPAN */
+.input-box span {
     position: absolute;
     left: 0;
     padding: 5px 0;
@@ -211,11 +218,12 @@ select, option{
     letter-spacing: 1px;
     color: #888;
     pointer-events: none;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
+/* ANIMACIÓN DE ETIQUETAS SPAN */
 .input-box input:focus ~ span,
-.input-box input:valid ~ span{
+.input-box input:valid ~ span {
     transform: translateY(-20px);
     font-size: 14px;
     font-weight: 400;
@@ -223,12 +231,13 @@ select, option{
     color: #03A9F4;
 }
 
-.input-box.btn{
+/* BOTÓN DE ENVIAR */
+.input-box.btn {
     display: flex;
     justify-content: flex-end;
 }
 
-.input-box input[type="submit"]{
+.input-box input[type="submit"] {
     cursor: pointer;
     background: #0F3959;
     text-transform: uppercase;
@@ -239,10 +248,43 @@ select, option{
     border: none;
     width: 30%;
     padding: 12px;
-    transition: all .5s;
+    transition: all 0.5s;
     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.input-box input[type="submit"]:hover{
+.input-box input[type="submit"]:hover {
     background: #5EBEC3;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Añadir iconos a etiquetas */
+.input-box label i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Añadir icono al botón */
+.input-box.btn input[type="submit"] i {
+    margin-right: 5px;
+}
+/* Agregar animación al botón de envío */
+.animacion-envio {
+    animation-name: bounce; /* Nombre de la animación */
+    animation-duration: 0.5s; /* Duración de la animación */
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }

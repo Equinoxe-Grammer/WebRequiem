@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Conecta a tu base de datos
-$conexion = mysqli_connect("localhost", "root", "", "proyectof");
+$conexion = mysqli_connect("localhost", "root", "Teteradegas69/", "proyectof");
 
 // Verifica si hay errores en la conexión
 if (mysqli_connect_errno()) {
@@ -37,7 +37,6 @@ if (mysqli_num_rows($resultado) == 1) {
     $_SESSION['IdUsuario'] = $Id;
     $_SESSION['Contraseña'] = $contraseña;
     echo "<script>
-    alert('bienvenido haz ingresado correctamente');
     location.href = '../Vistas/index.php'
     </script>";
 } else {

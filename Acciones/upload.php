@@ -9,7 +9,7 @@ if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
 // Conectarse a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Teteradegas69/";
 $dbname = "proyectof";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -34,15 +34,11 @@ $imagen_binario = addslashes(file_get_contents($imagen));
 $sql = "INSERT INTO producto (Nombre, Precio, Existencia, Descripcion, imagen,idUsuario) VALUES ('$Nombre', '$Precio', '$Existencias', '$Descripcion', '$imagen_binario','$Id')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Los datos se han insertado correctamente.";
+  
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
-?>
-<?php 
-}else {
-  header('location:../Vistas/inicio.php');
 }
 ?>

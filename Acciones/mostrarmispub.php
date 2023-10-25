@@ -1,7 +1,7 @@
 <?php
 
 // Conexión a la base de datos
-$conn = mysqli_connect("localhost", "root", "", "proyectof");
+$conn = mysqli_connect("localhost", "root", "Teteradegas69/", "proyectof");
 
 $id= $_SESSION['IdUsuario'];
 // Consulta SQL para seleccionar todas las filas de la tabla productos con el Idusuario 1 

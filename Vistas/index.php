@@ -1,10 +1,8 @@
-<?php session_start();
-if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
+<?php
+session_start();
 
-
-
+if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña'])) {
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,22 +13,20 @@ if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="../fontawesome/css/all.css">
   <link rel="stylesheet" href="../CSS/Estilo-Reportes.css">
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M32 32c17.7 0 32 14.3 32 32V288c0 70.7 57.3 128 128 128s128-57.3 128-128V64c0-17.7 14.3-32 32-32s32 14.3 32 32V288c0 106-86 192-192 192S0 394 0 288V64C0 46.3 14.3 32 32 32z'/%3E%3C/svg%3E" type="image/svg+xml">
+    
   <title>WebRequiem</title>
 </head>
 
 <body>
   <!-- MENÚ DE NAVEGACIÓN -->
-  <?php
-  include '../Acciones/navbar.php'
-  ?>
-
-
+  <?php include '../Acciones/navbar.php'; ?>
+  
   <!-- Header -->
   <header>
     <div class="contenido">
-      <h2 class="titulo-centrado">Web Requiem</h2>
-      <p>¡Bienvenido a Web Requiem!. Somos una plataforma de comercio electrónico diseñada especialmente para la comunidad de la Universidad Autónoma de Nuevo León (UANL). Aquí puedes publicar y vender todo lo que desees, desde libros de texto, material escolar, comida productos artesanales, ropa, etc.</p>
+      <h1 class="titulo-centrado">Web Requiem</h1>
+      <p>¡Bienvenido a Web Requiem! Somos una plataforma de comercio electrónico diseñada especialmente para la comunidad de la Universidad Autónoma de Nuevo León (UANL). Aquí puedes publicar y vender todo lo que desees, desde libros de texto, material escolar, comida, productos artesanales, ropa, etc.</p>
 
       <p>En Web Requiem, nos enfocamos en brindarte una experiencia de compra y venta fácil, rápida y segura. Nuestro sistema de pago en línea es confiable y garantiza la protección de tus datos y transacciones.</p>
 
@@ -44,7 +40,7 @@ if (isset($_SESSION['IdUsuario']) && isset($_SESSION['Contraseña']) ){
 </body>
 </html>
 <?php 
-}else {
-  header('location:../Vistas/inicio.php');
+} else {
+  header('Location: ../Vistas/inicio.php');
 }
 ?>

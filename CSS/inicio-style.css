@@ -1,180 +1,167 @@
-*{
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-section{
+/* Estilos para la sección principal */
+section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #112D42;
+    min-height: 100vh;
+    background: linear-gradient(to right, #5EBEC3, #112D42);
+    position: relative;
+    overflow: hidden;
 }
 
-
-section::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: #5EBEC3;
-}
-
-.container{
+/* Contenedor principal */
+.container {
     position: relative;
     width: 80%;
-    height: 50%;
     z-index: 1;
-    display: flex;
 }
 
-h2{
+/* Estilos para el título */
+h2 {
     font-size: 28px;
     font-weight: bold;
+    color: #fff;
+    text-align: center;
 }
 
-h3{
+/* Estilos para subtítulos */
+h3 {
     font-size: 22px;
     font-weight: 400;
     color: #0F3959;
 }
 
-/* FORMULARIO */
-.form{
-    position: absolute;
-    width: calc(100% - 200px);
-    height: 400px;
-    background: #FFF;
-    margin-left: 150px;
-    padding: 70px 50px 70px 250px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+/* Formulario */
+.form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    margin: 30px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeIn 1s;
 }
 
-.form h2{
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el título del formulario */
+.form h2 {
     color: #0F3959;
     text-align: center;
 }
 
-.form-box{
+/* Estilos para los elementos del formulario */
+.form-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
-.input-box{
+.input-box {
     position: relative;
-    margin-bottom: 35px;
-}
-
-.input-box.w50{
+    margin-bottom: 20px;
     width: 100%;
 }
 
-.input-box.w100{
+.input-box input {
     width: 100%;
-}
-
-.input-box.w99{
-    width: 48%;
-}
-
-.input-box input{
-    width: 100%;
-    padding: 5px 0;
+    padding: 10px;
     font-size: 18px;
     color: #333;
     border: none;
-    border-bottom: 1px solid #777;
+    border-bottom: 2px solid #0F3959;
+    background: transparent;
     outline: none;
+    transition: all 0.3s;
 }
 
-
-.input-box span{
+.input-box span {
     position: absolute;
     left: 0;
-    padding: 5px 0;
+    padding: 10px;
     font-size: 16px;
     letter-spacing: 1px;
-    color: #888;
+    color: #0F3959;
     pointer-events: none;
-    transition: all .5s;
+    transition: all 0.3s;
 }
 
 .input-box input:focus ~ span,
-.input-box input:valid ~ span{
+.input-box input:valid ~ span {
     transform: translateY(-20px);
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #03A9F4;
 }
 
-.input-box.btn{
+/* Estilos para botones y enlaces */
+.input-box.btn {
     display: flex;
     justify-content: flex-end;
 }
 
-
-button{
+button, .registro {
     cursor: pointer;
-    background: #38db96;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #FFF;
-    border: none;
-    width: 100%;
-    padding: 10px;
-    transition: all .5s;
-}
-
-button:hover{
-    background: #008f39;
-}
-
-.registro{
-    cursor: pointer;
-    background: #38db96;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #FFF;
-    border: none;
-    width: 110px;
-    padding: 10px;
-    transition: all .5s;
-    position: absolute;
-    top: 280px;
-    right:360px;
-}
-
-.registro:hover{
-    background: #008f39;
-}
-
-
-.input-box input[type="submit"]{
-    cursor: pointer;
-    background: #0F3959;
+    background: #5EBEC3; /* Color de fondo para botones */
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #FFF;
+    color: #fff;
     border: none;
-    width: 30%;
-    padding: 12px;
-    transition: all .5s;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    animation: pulse 1s infinite;
 }
 
-.input-box input[type="submit"]:hover{
-    background: #5EBEC3;
+button:hover, .registro:hover {
+    background: #008f39; /* Cambio de color al pasar el cursor */
 }
 
+/* Estilos para el botón de enviar */
+
+
+/* Estilos para el botón de enviar */
+.input-box input[type="submit"] {
+    background: #0F3959; /* Color de fondo para el botón de enviar */
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 100%;
+    cursor: pointer;
+    color: #fff; /* Cambio de color del texto del botón */
+}
+
+.input-box input[type="submit"]:hover {
+    background: #5EBEC3; /* Cambio de color al pasar el cursor */
+}
+
+
+/* Animación de pulsación para botones */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}

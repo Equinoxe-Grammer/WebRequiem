@@ -2,7 +2,7 @@
 // Conectarse a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Teteradegas69/";
 $dbname = "proyectof";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -26,10 +26,13 @@ if (isset($_POST['facultad'])) {
 $sql = "INSERT INTO usuario (Nombre, Matricula, Correo, Contraseña, IdFacultad, IdRol) VALUES ('$Nombre', '$Matricula', '$Correo', '$password', '$facultad','1')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Los datos se han insertado correctamente.";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-  
+  // Registro exitoso, redirige a inicio.php con un mensaje de éxito
+  header("Location: ../Vistas/inicio.php?registro=exitoso");
+  exit();
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+} 
+
+
   $conn->close();
   ?>
