@@ -20,9 +20,8 @@ $contraseña = mysqli_real_escape_string($conexion, $contraseña);
 
 // Crea una consulta SQL para seleccionar el usuario y la contraseña de la tabla de usuarios
 $sql = "SELECT * FROM usuario WHERE matricula = '$matricula' AND contraseña = '$contraseña'";
-$query = $conexion->query($sql);
-// Ejecuta la consulta SQL
-$resultado = mysqli_query($conexion, $sql);
+// Ejecuta la consulta SQL una sola vez
+$resultado = $conexion->query($sql);
 
 // Verifica si hay errores en la consulta SQL
 if (!$resultado) {
@@ -31,8 +30,8 @@ if (!$resultado) {
 }
 
 // Verifica si el número de filas devueltas por la consulta es igual a 1
-if (mysqli_num_rows($resultado) == 1) {
-    $usuario = $query->fetch_assoc();
+if ($resultado->num_rows == 1) {
+    $usuario = $resultado->fetch_assoc();
     $Id=  $usuario['IdUsuario'];
     $_SESSION['IdUsuario'] = $Id;
     $_SESSION['Contraseña'] = $contraseña;
